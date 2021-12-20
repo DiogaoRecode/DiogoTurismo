@@ -1,0 +1,81 @@
+﻿@model DiogoTurismo.Models.Passagem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    .navbar{
+        margin-bottom:0;
+    }
+
+    .extra-jumbotron{
+        background-image:url('/Destino.jpg');
+        background-size:100%;
+    }
+
+
+  .body{
+      background-color:yellow;
+  }
+</style>
+
+
+<div class="jumbotron extra-jumbotron">
+      <h1 style="color:white"><span style="color:yellow"> P</span>ASSAGENS</h1>
+      <h2 style="color:yellow;">DETALHES</h2>
+  </div>
+
+<div>
+    <h4>Passagem Registrada</h4>
+    <hr />
+    <dl class="row" style="background:black;color:yellow;">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("N° Passaporte:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Numero_passaporte)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Data de saída:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Data_saida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Data de chegada:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Data_chegada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Horário de saída:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Horario_saida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Horário de chegada:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Horario_chegada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Cliente:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cadastro.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Cidade de destino:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Destino.Cidade_destino)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id_passagem">Editar</a> &nbsp
+    <a class="btn btn-dark" asp-action="Index">Voltar no menu</a>
+</div>
+

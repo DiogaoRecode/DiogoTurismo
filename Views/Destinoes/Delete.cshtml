@@ -1,0 +1,54 @@
+﻿@model DiogoTurismo.Models.Destino
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<style>
+    .navbar{
+        margin-bottom:0;
+    }
+
+    .extra-jumbotron{
+        background-image:url('/Destino.jpg');
+        background-size:100%;
+    }
+
+
+  .body{
+      background-color:yellow;
+  }
+</style>
+
+
+<div class="jumbotron extra-jumbotron">
+      <h1 style="color:white"><span style="color:yellow"> D</span>ESTINO</h1>
+       <h2 style="color:yellow;">DELETAR</h2>
+  </div>
+
+<h3>Você realmente deseja deletar o Destino?</h3>
+<div class="align-self-center" style="background:black;color:yellow;">
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Cidade Destino :")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cidade_destino)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Cidade Origem :")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cidade_origem)
+        </dd>
+    </dl>
+ 
+</div>
+
+<form asp-action="Delete">
+        <input type="hidden" asp-for="Id_destino" />
+        <input type="submit" value="Delete" class="btn btn-warning" /> &nbsp
+        <a class="btn btn-dark" asp-action="Index">Voltar ao menu </a>
+    </form>

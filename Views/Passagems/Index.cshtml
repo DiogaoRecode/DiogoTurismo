@@ -1,0 +1,91 @@
+﻿@model IEnumerable<DiogoTurismo.Models.Passagem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .navbar{
+        margin-bottom:0;
+    }
+
+    .extra-jumbotron{
+        background-image:url('/Destino.jpg');
+        background-size:100%;
+    }
+
+
+  .body{
+      background-color:yellow;
+  }
+</style>
+
+
+<div class="jumbotron extra-jumbotron">
+      <h1 style="color:white"><span style="color:yellow"> P</span>ASSAGENS</h1>
+      <h4 style="color:white">MENU PARA FAZER ALTERAÇÕES NO CONTEÚDO PASSAGENS</h4>
+  </div>
+
+<p>
+    <a class="btn btn-warning" asp-action="Create">Registrar nova passagem</a>
+</p>
+<table class="table table-hover" style="text-align:center;background:yellow;color:white;">
+    <thead style="background:black;color:yellow;">
+        <tr>
+            <th>
+                @Html.DisplayName("Nº Passaporte ")
+            </th>
+            <th>
+                @Html.DisplayName("Data de saída")
+            </th>
+            <th>
+                @Html.DisplayName("Data de chegada")
+            </th>
+            <th>
+                @Html.DisplayName("Horário de saída")
+            </th>
+            <th>
+                @Html.DisplayName("Horário de chegada")
+            </th>
+            <th>
+               @Html.DisplayName("Cliente cadastrado")
+            </th>
+            <th>
+                @Html.DisplayName("Cidade de destino")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_passaporte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_saida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_chegada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Horario_saida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Horario_chegada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cadastro.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino.Cidade_destino)
+            </td>
+            <td>
+                <a class="btn btn-secondary"  asp-action="Edit" asp-route-id="@item.Id_passagem">Editar</a> 
+                <a class="btn btn-primary"  asp-action="Details" asp-route-id="@item.Id_passagem">Detalhes</a> 
+                <a class="btn btn-danger"  asp-action="Delete" asp-route-id="@item.Id_passagem">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

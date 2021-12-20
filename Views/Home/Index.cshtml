@@ -1,0 +1,288 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" media="(max-width: 800px)" href="./css./css/site.css" />
+<head>
+<style> 
+/*Config.Carousel*/
+    .carousel-caption{
+        margin-bottom:150px;
+    }
+
+
+
+/*Config.Destaques*/
+#featured-container{
+    margin-bottom:4em;
+}
+
+.title{
+    font-size: 1.75em;
+     margin-bottom: 0.4em;
+     position: relative;
+}
+
+.title:before{
+    width: 75px;
+    border-top: 4px solid black;
+    content:'';
+    position: absolute;
+    bottom: 2em;
+}
+
+#featured-images {
+    margin-top: 2em;
+}
+
+#featured-images .col-md-4{
+    position: relative;
+    cursor: pointer;
+}
+
+#featured-images .col-md-4:hover > .banner-content{
+opacity:0.8;
+}
+
+
+#featured-images .banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.6;
+    transition:0.5s;
+}
+
+        .title {
+            font-size: 2.4em;
+        }
+        .title:before{
+            bottom:1.5em;
+        }
+ #featured-images .banner-content{
+     opacity:0;
+ }
+</style>
+</head>
+
+
+<body>
+<div id="video-carousel-example"  class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
+             <li data-target="#video-carousel-example" data-slide-to="1" class="active"></li>
+              <li data-target="#video-carousel-example" data-slide-to="2" class="active"></li>
+        </ol>
+         
+
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="overflow: hidden;height: 100vh; min-width: 100%;">
+                <video class="video-fluid" autoplay loop muted>
+                    <source src="~/Viagem-1.mp4" type="video/mp4" />
+                </video>
+                <div class="carousel-caption font-weight-bold text-white">
+                    <p style="font-size: 70px;">Viajar é <span style="color:yellow;">VIVER</span> !</p>
+                    <p style="font-size: 18px;">Vamos transformar a sua experiência na melhor conquista da sua vida !</p>
+                    <button type="button" class="btn btn-warning btn-lg mt-3 text-white">Cadastra-se agora</button>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="overflow: hidden;height: 100vh; min-width: 100%;">
+                <video class="video-fluid" autoplay loop muted>
+                    <source src="./Paris.mp4" type="video/mp4" />
+                </video>
+                <div class="carousel-caption font-weight-bold text-white">
+                    <p style="font-size: 70px;">Viajar é <span style="color:yellow;">VIVER</span> !</p>
+                    <p style="font-size: 18px;">Vamos transformar a sua experiência na melhor conquista da sua vida !</p>
+                    <button type="button" class="btn btn-warning btn-lg mt-3 text-white">Cadastra-se agora</button>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="overflow: hidden;height: 100vh; min-width: 100%;">
+                <video class="video-fluid" autoplay loop muted>
+                    <source src="./turista.mp4" type="video/mp4" />
+                </video>
+                <div class="carousel-caption font-weight-bold text-white">
+                    <p style="font-size: 70px;">Viajar é <span style="color:yellow;">VIVER</span> !</p>
+                    <p style="font-size: 18px;">Vamos transformar a sua experiência na melhor conquista da sua vida !</p>
+                    <button type="button" class="btn btn-warning btn-lg mt-3 text-white">Cadastra-se agora</button>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#video-carousel-example" role="button"  data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+        </a>
+
+         <a class="carousel-control-next" href="#video-carousel-example" role="button"  data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Proxima</span>
+        </a>
+    </div>
+
+    <br>
+
+ <div class="jumbotron" style="background-color:yellow;">
+  <h1 class="display-6">Ofertas imperdíveis de<span style="color:white;"> voos nacionais e internacionais</span></h1>
+  <p class="lead">Compre seu pacote para Paris e aproveite as ofertas imbatíveis do Diogo Turismo</p>     
+  <hr class="my-4">
+  <div class="card-group" style="text-align:center;">
+  <div class="card">
+    <img src="/san andreas.jpg" class="card-img-top" alt="..." style="height:210px;">
+    <div class="card-body">
+      <h5 class="card-title">SAN ANDRÉS <span style="color:blueviolet;">(COLÔMBIA)</span></h5>
+      <p class="card-text">Famoso arquipélago do Caribe, San Andrés é um destino da Colômbia com praias paradisíacas, muitas opções de hospedagens e restaurantes para comer frutos do mar. Por lá você e a sua família irão curtir bastante as ilhas com águas esverdeadas, os passeios de barco e poderão aproveitar todo o conforto dos resorts all inclusive.</p>
+      <h5 style="color:blue;"> R$ 3.450,00</h5>
+      <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+      <p class="card-text"><small class="text-muted">Atualizado à 1 min</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/Paris.jpeg" class="card-img-top" alt="..." style="height:210px;">
+    <div class="card-body">
+      <h5 class="card-title">PARIS <span style="color:blueviolet;">(FRANÇA)</span></h5>
+      <p class="card-text">Um dos destinos mais badalados e românticos do mundo, a capital da França atrai casais apaixonadas em busca da lua de mel perfeita, amantes de história e todos que não resistem ao charme francês. </p> 
+      <h5 style="color:blue;"> R$ 4.980,00</h5>
+      <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+       <p class="card-text"><small class="text-muted">Atualizado à 20 min</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="/mexico.jpg" class="card-img-top" alt="..." style="height:210px;">
+    <div class="card-body">
+      <h5 class="card-title">PACOTE MÉXICO</h5>
+      <p class="card-text">Poucos países no mundo podem se gabar de ter tantas opções de turismo como o México. Além das praias azuis do Caribe, o destino possui ruínas de antigas civilizações, cidades muradas, grandes centros urbanos, ilhas paradisíacas e uma cultura rica. Das pirâmides de Teotihuacán aos casarões coloniais da época da colonização espanhola, o país atende a qualquer perfil de viajante, sejam os aventureiros atrás de paisagens naturais.</p>
+      <h5 style="color:blue;"> R$ 5.750,00</h5>
+      <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+      <p class="card-text"><small class="text-muted">Atualizado à 1 h</small></p>
+    </div>
+  </div>
+ </div>
+</div>
+
+<div class="container" id="featured-container">
+    <div class="col-12">
+    <h2 class="title primary-color">Promoções do Dia</h2>
+        <p class="subtitle secondary-color">
+            Conheça nossos pacotes inéditos
+        </p>
+       </div>
+       <div class="col-12"  id="featured-images">
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <img src="./BetoCarreiro.jpg" alt="Projeto 1" class="img-fluid" style="height:210px; margin-bottom:15px;width:400px;" > 
+               <div class="banner-content">
+               <h5 style="color:red;">Nacional</h5>
+                <h3>Pacote Beto Carrero</h3>
+                <p>De: <s>R$ 3.900,00</s></p>
+                <h5 style="color:blue;"> R$ 3.450,00</h5>
+                 <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+             </div>
+            </div>
+       
+            <div class="col-12 col-md-4">
+                <img src="./disney.jpg" alt="Projeto 2" class="img-fluid" style="height:210px; margin-bottom:15px;width:400px;"> 
+                <div class="banner-content">
+                <h5 style="color:red;">Internacional</h5>
+                <h3>Pacote Disney</h3>
+                <p>De: <s>R$ 10.200,00</s></p>
+                <h5 style="color:blue;"> R$ 8.740,00</h5>
+                <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+             </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <img src="./monte verde.jpg" alt="Projeto 3" class="img-fluid" style="height:210px;margin-bottom:15px;width:400px;"> 
+                <div class="banner-content">
+                <h5 style="color:red;">Nacional</h5>
+                <h3>Pacote Monte Verde</h3>
+                <p>De: <s>R$ 980,00</s></p>
+                <h5 style="color:blue;"> R$ 740,00</h5>
+                 <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+             </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="./natal.jpg" alt="Projeto 4" class="img-fluid" style="height:210px;margin-bottom:15px;width:400px;"> 
+                <div class="banner-content">
+                <h5 style="color:red;">Nacional</h5>
+                <h3>Pacote Natal</h3>
+                <p>De: <s>R$ 1.320,00</s></p>
+                <h5 style="color:blue;"> R$ 1.080,00</h5>
+                 <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+             </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="./Roma2.jpg" alt="Projeto 5" class="img-fluid" style="height:210px;margin-bottom:15px;width:400px;" > 
+                <div class="banner-content">
+                <h5 style="color:red;">Internacional</h5>
+                <h3>Pacote Roma</h3>
+                <p>De: <s>R$ 3.450,00</s></p>
+                <h5 style="color:blue;"> R$ 2.980,00</h5>
+                 <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+             </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="./serra gaucha.jpg" alt="Projeto 6" class="img-fluid" style="height:210px;margin-bottom:15px;width:400px;"> 
+                <div class="banner-content">
+               <h5 style="color:red;">Nacional</h5>
+                <h3>Pacote Serra Gaúcha</h3>
+                <p>De: <s>R$ 1.259,00</s></p>
+                <h5 style="color:blue;"> R$ 980,00</h5>
+                 <button type="button" class="btn btn-dark" style="color:yellow;">Comprar</button>
+             </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container" style="background-color:yellow;">    <!--Inserindo tabela-->
+        <p></p>            
+        <table class="table">
+          <thead style="background-color:black;color:yellow;">
+            <tr>
+              <th>Diogo Turismo</th>
+              <th>Televendas</th>
+              <th>Central de atendimento</th>
+              <th>Termos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sobre nós</td>
+              <td>9999-9999</td>
+              <td>31 2222 2222</td>
+              <td>Condições de uso</td>
+            </tr>
+            <tr>
+              <td>Trabalhe conosco</td>
+              <td>Segunda à Sábado: 09h às 21h</td>
+              <td>Informações COVID-19</td>
+               <td>Condições Gerais</td>
+            </tr>
+            <tr>
+              <td>Seja um Franqueado</td>
+              <td>Domingo e Feriados: 10h às 16h</td>
+              <td>Remarcações de viagens</td>
+              <td>Politica de privacidade</td>
+            </tr>
+
+            <tr>
+                <td>Sala de imprensa</td>
+                <td></td>
+                <td>Central de relacionamento</td>
+                <td>Código de Conduta Ética</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+</body>

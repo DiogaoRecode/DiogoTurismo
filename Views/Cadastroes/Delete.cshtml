@@ -1,0 +1,65 @@
+﻿@model DiogoTurismo.Models.Cadastro
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<style>
+    .navbar{
+        margin-bottom:0;
+    }
+
+    .extra-jumbotron{
+        background-image:url('/Destino.jpg');
+        background-size:100%;
+    }
+
+
+  .body{
+      background-color:yellow;
+  }
+</style>
+
+
+<div class="jumbotron extra-jumbotron">
+      <h1 style="color:white"><span style="color:yellow"> C</span>ADASTRO</h1>
+       <h2 style="color:yellow;">DELETAR</h2>
+  </div>
+
+<h3>Você realmente deseja deletar o cadastro do cliente?</h3>
+<div class="align-self-center" style="background:black;color:yellow;">
+    <h4>Cadastro</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Nome :")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("CPF :")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Email :")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Telefone :")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id_cadastro" />
+        <input type="submit" value="Deletar" class="btn btn-warning" /> &nbsp
+        <a class="btn btn-dark" asp-action="Index">Voltar ao menu</a>
+    </form>
+</div>

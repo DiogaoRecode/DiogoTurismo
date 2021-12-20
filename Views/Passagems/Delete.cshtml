@@ -1,0 +1,82 @@
+﻿@model DiogoTurismo.Models.Passagem
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<style>
+    .navbar{
+        margin-bottom:0;
+    }
+
+    .extra-jumbotron{
+        background-image:url('/Destino.jpg');
+        background-size:100%;
+    }
+
+
+  .body{
+      background-color:yellow;
+  }
+</style>
+
+
+<div class="jumbotron extra-jumbotron">
+      <h1 style="color:white"><span style="color:yellow"> P</span>ASSAGENS</h1>
+      <h2 style="color:yellow;">DELETAR</h2>
+  </div>
+
+<h3>Você realmente deseja apagar o contato?</h3>
+<div class="align-self-center" style="background:black;color:yellow;">
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("N° Passaporte:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Numero_passaporte)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Data de saída:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Data_saida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Data de chegada:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Data_chegada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Horário de saída:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Horario_saida)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Horário de chegada:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Horario_chegada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Cliente cadastrado:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cadastro.Nome)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Cidade de destino:")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Destino.Cidade_destino)
+        </dd class>
+    </dl>
+ </div>   
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id_passagem" />
+        <input type="submit" value="Delete" class="btn btn-warning" /> &nbsp
+        <a class="btn btn-dark" asp-action="Index">Voltar ao menu</a>
+    </form>
+
