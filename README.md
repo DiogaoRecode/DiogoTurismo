@@ -1,5 +1,5 @@
-# Diogo Turismo versão ASPNET / #C
-🛩️Projeto do Módulo 3 - ASPNET CRUD
+# Diogo Turismo versão ASP.NET / #C
+🛩️Projeto do Módulo 3 - ASP.NET CRUD
 
 Dando continuidade à criação do site da agência de viagens DIOGO TURISMO. Contemplou-se uma estrutura de layout 
 com um menu horizontal na parte superior de todas as páginas: HOME, CADASTRO, DESTINOS, PROMOCOES, CONTATO.
